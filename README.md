@@ -1,73 +1,21 @@
-# VizHub Feature Overview
+# VizHub documentation notes
 
-**VizHub** is an open-source platform for creating, modifying, and sharing interactive data visualizations built with **HTML, CSS, and JavaScript** (often alongside libraries such as D3.js or Vega-Lite). Below is a concise guide to the core workflow and capabilities that set VizHub apart.
+This public repository contains an **older feature overview** for VizHub. It is not the source code for the current hosted application, and its earlier README mixed documented capabilities with assumptions about routes, integrations, downloads, and deployment.
 
----
+## Where to start
 
-## Core Workflow
+- **Using VizHub:** [vizhub.com](https://vizhub.com/) is the current product entry point.
+- **Historical feature ideas:** [HISTORICAL_FEATURE_OVERVIEW.md](HISTORICAL_FEATURE_OVERVIEW.md) preserves the earlier feature overview, explicitly marked **unverified**. Its instructions must not be used as a current runbook without independently checking each feature.
+- **Public ecosystem repositories:** See the [VizHub GitHub organization](https://github.com/vizhub-studio) and its [public repository catalog](https://github.com/vizhub-studio/.github/blob/main/REPOSITORY_CATALOG.md).
 
-1. **Fork → Modify → Share**
+## Maintenance policy
 
-   | Step | What Happens in VizHub | Why It Matters |
-   |------|------------------------|----------------|
-   | **Fork** | Click **Fork** on any public “Viz” to create your own copy. | Start from a working example instead of a blank page. |
-   | **Modify** | Edit code directly in the browser—change data, tweak styles, add interactions. | Rapid prototyping without local setup. |
-   | **Share** | Generate a unique URL, social card, and embed snippet with a single click. | Instantly show your work to the world. |
+Documentation of current behavior should be verified against the application source and actual deployed user experience. In particular:
 
----
+- **Identity and domains:** The current product is called **VizHub**. Legacy services and earlier UI screenshots must be labeled historical.
+- **Features:** Check whether a capability exists, is enabled for a given plan, and is available in production before describing it as supported.
+- **Pricing, auth, privacy and access controls:** These are time-sensitive; do not infer them from older notes.
+- **Examples and links:** Use only confirmed URLs, scripts, and installation steps; mark unverified workflows as historical.
+- **Security:** Do not publish private repository content, credentials, or customer data here.
 
-## Feature Highlights
-
-### 🖍️ Forking & Modifying
-- **One-Click Fork**: Duplicate any public visualization to kick-start your own version.  
-- **Version Isolation**: Your fork tracks its own history, leaving the original untouched.
-
-### 🤖 Editing with AI
-- **AI Code Assistant**: Invoke **/ai-edit** to get line-level refactors, doc comments, or full rewrites.  
-- **Prompt-Based Changes**: Describe what you want (“add a tooltip”) and watch the editor update in seconds.
-
-### 🔒 Changing Visibility
-- **Public ↔ Private Toggle**: Switch a Viz between public, unlisted, or private at any time.  
-- **Team-Only Mode**: Share privately with collaborators without exposing the link publicly.
-
-### 👥 Real-Time Collaboration
-- **Live Cursor Presence**: See teammates’ cursors and selections, Google-Docs style.  
-- **Conflict-Free Merging**: Edits sync instantly—no git conflicts or refreshes required.
-
-### 📣 Sharing on Social Media
-- **Smart Social Cards**: VizHub auto-generates Open Graph images so links look great on X/Twitter, LinkedIn, and Facebook.  
-- **Permalink Stability**: Each visualization has a canonical URL that never changes.
-
-### 🖼️ Embedding
-- **Iframe Snippet**: Copy-paste a tiny embed tag into Medium, Notion, or your own blog.  
-- **Responsive by Default**: Embedded visualizations resize to fit any container or device.
-
-### 💾 Exporting Code
-- **Download ZIP**: Grab a clean, runnable bundle of HTML, JS, CSS, and assets.  
-- **Choose Bundler**: Export plain ES modules or a pre-built Rollup bundle for older browsers.
-
-### 🏃 Running Exported Code Locally
-1. **Unzip** the download.
-2. **Install Dependencies** (if any):
-   ```bash
-   npm install
-````
-
-3. **Start a Local Server**:
-
-   ```bash
-   npx serve .
-   # or
-   npm run dev   # if a Vite config is included
-   ```
-4. Open `http://localhost:3000` (or the printed port) to view the visualization offline.
-
----
-
-## Why Developers Love VizHub
-
-* **No Infrastructure Overhead**: Skip the boilerplate; focus on the visualization.
-* **Instant Feedback Loop**: Live preview updates with every keystroke.
-* **Open Source & Self-Hostable**: Deploy your own VizHub if you need complete control.
-
-Ready to explore? Fork a Viz, try the AI editor, and share your creation with the world—no install required.
+This repository has no root `package.json` or build/test command. No live product behavior is changed by edits here.
